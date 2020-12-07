@@ -3,6 +3,7 @@ import time
 from progress.bar import Bar
 import argparse
 import os
+from shutil import copyfile, move
 
 
 class Document2Label:
@@ -70,6 +71,32 @@ class Document2Label:
             filename_list = self.label_map[label_key]
 
         return filename_list
+
+    '''
+        Specify a label key for the document type, e.g. 11 for invoices
+        The function will EXTRACT invoices related to this document type from the 'data' folder 
+        and put them in 'sorted_data' folder
+    '''
+    def QueryAndSortDocumentType(self, label_key, data_folder, sorted_data_folder, move_or_copy="copy"):
+
+        if label_key in self.label_map:
+
+            filename_list = self.label_map[label_key]
+            total_files = len(filename_list)
+
+            with Bar('Copying files', max=total_files) as bar:
+                for filename in filename_list:
+                    if move_or_copy == "copy":
+                        copyfile(data_folder+'/'+filename, data_folder+'/'+filename)
+                    elif move_or_copy == "move":
+                        move(data_folder+'/'+filename, data_folder+'/'+filename)
+
+                    bar.next()
+
+            bar.finish()
+
+
+
 
 
 
