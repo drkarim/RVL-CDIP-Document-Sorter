@@ -50,16 +50,17 @@ class Document2Label:
                 stop = True
                 line_count = 0
 
-                while line_count < total_lines:
+                while line and line_count < total_lines:
                     fn_and_label = line.split(" ")
                     filename = fn_and_label[0]
                     label_value = int(fn_and_label[1].rstrip("\n"))
 
-                    if label_value in self.label_dictionary:
+                    if label_value in self.label_dictionary.keys():
                         self.label_map[label_value].append(filename)
 
 
                     line_count = line_count + 1
+                    line = file_object.readline()
                     bar.next()
         bar.finish()
 
