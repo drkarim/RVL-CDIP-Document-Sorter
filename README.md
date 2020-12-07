@@ -1,14 +1,14 @@
 # RVL-CDIP-Document-Sorter
 
-## What dataset are we talking about?  
+### What dataset are we talking about?  
 THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. The dataset consists of 400,000 grayscale images in 16 classes (invoices, memos, resumes, forms, etc.), with 25,000 images per class. 
 
 At the time of writing, it is one of the largest public datasets for scanned documents. It could be looked at as the equivalent of [ImageNet](http://www.image-net.org/) for the document image community. 
 
-## Too good to be true? 
+### Too good to be true? 
 One caveat is that the documents go back a few decades, some pre internet era, circa 1980s. There are no annotations inside the document if that's what you are looking for. However, every document has been classified to fall into one of the 16 categories. 
 
-## What is this repo all about then? 
+### What is this repo all about then? 
 This repo contains Python code that performs a very simple task. It reads the label text files and extracts the document images of a chosen category into a folder. The label text files are in the original dataset under ```labels > [test | train | val].txt```
 
 Typical lines in these files look like: 
@@ -23,7 +23,7 @@ imagesg/g/t/l/gtl97d00/2063755082.tif 9
 
 The python code reads each of the specified label text file (i.e. test, train, val) and extracts all TIF files of the specified chosen category (e.g. 6) and places them into a separate folder, so you can see all the TIF images of your favourite category all in one folder! 
 
-## How to use the repo
+### How to use the repo
 
 The usage is follows. Using the document sorter is simple. You have to specify folder locations of:
 
@@ -39,12 +39,12 @@ python document_sorter.py
    -l <label-of-doc-cateogry-you-wish-to-copy-1-to-16>
 ```
 
-## Feeling too lazy? 
+### Feeling too lazy? 
 On Kaggle, Poojan P. has done the sorting of the test set already for you. But only the test set, and of course it stil has over 1000s of documents per category. May not be 10s of thousands like in the training set, but plenty still for most purposes. Go and [grab it from Kaggle repository](https://www.kaggle.com/pdavpoojan/the-rvlcdip-dataset-test) if you are feeling too lazy to clone this repo. 
 
 Just as a comparison, the training set has over 19k images of the invoice category. The test set may only 2k of invoices. 
 
-## About the dataset 
+### About the dataset 
 The [RVL-CDIP](https://www.cs.cmu.edu/~aharley/rvl-cdip/) (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels. 
 
 Excellent work from [Carnegie mellon university and Ryerson universities](https://www.cs.cmu.edu/~aharley/rvl-cdip/), with authors Adam W. Harley, Alex Ufkes, and Konstantinos G. Derpanis. 
@@ -68,7 +68,7 @@ The document classes are:
 15. resume
 16. memo
 ```
-## This dataset is not for me then 
+### This dataset is not for me then, ah well ..  
 
 Go knock yourself out with these publicly available datasets: 
 
