@@ -6,7 +6,7 @@ THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](ht
 At the time of writing, it is one of the largest public datasets for scanned documents. It could be looked at as the equivalent of [ImageNet](http://www.image-net.org/) for the document image community. 
 
 ### Too good to be true? 
-One caveat is that a significant portion of documents go back a few decades, some pre internet era, pre 1980s! Old-style and old-school documents, poor scan quality with lots of noise. 
+One caveat is that a significant portion of documents go back a few decades, some pre internet era, 1980s, 70s and 50s! Old-style and old-school documents, poor scan quality with lots of noise. 
 
 There are no annotations 'inside' the document if that's what you are looking for. However, every document has been classified to fall into one of the 16 categories. 
 
