@@ -39,8 +39,6 @@ class Document2Label:
     def SetLabelFile(self, filename):
         self.label_filepath = filename
 
-
-
     def ReadLabelFile(self):
 
         # count number of lines in file for progress bar
@@ -86,10 +84,11 @@ class Document2Label:
 
             with Bar('Copying files', max=total_files) as bar:
                 for filename in filename_list:
+                    base_name = os.path.basename(filename)
                     if move_or_copy == "copy":
-                        copyfile(data_folder+'/'+filename, data_folder+'/'+filename)
+                        copyfile(data_folder+'/'+filename, data_folder+'/'+base_name)
                     elif move_or_copy == "move":
-                        move(data_folder+'/'+filename, data_folder+'/'+filename)
+                        move(data_folder+'/'+filename, data_folder+'/'+base_name)
 
                     bar.next()
 
