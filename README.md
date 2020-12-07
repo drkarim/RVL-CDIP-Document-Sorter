@@ -4,7 +4,7 @@
 THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. The dataset consists of 400,000 grayscale images in 16 classes (invoices, memos, resumes, forms, etc.), with 25,000 images per class. At the time of writing, it is one of the largest public datasets for scanned documents. 
 
 ## Too good to be true? 
-One caveat is that the documents go back a few decades, some pre internet era, circa 1980s.
+One caveat is that the documents go back a few decades, some pre internet era, circa 1980s. There are no annotations inside the document if that's what you are looking for. However, every document has been classified to fall into one of the 16 categories. 
 
 ## What is this repo all about then? 
 This repo contains Python code that performs a very simple task. It reads the label text files and extracts the document images of a chosen category into a folder. The label text files are in the original dataset under ```labels > [test | train | val].txt```
