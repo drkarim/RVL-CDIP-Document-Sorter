@@ -1,8 +1,12 @@
 # RVL-CDIP-Document-Sorter
 
-## Introduction 
-THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. 
+## What dataset are we talking about?  
+THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. The dataset consists of 400,000 grayscale images in 16 classes (invoices, memos, resumes, forms, etc.), with 25,000 images per class. At the time of writing, it is one of the largest public datasets for scanned documents. 
 
+## Too good to be true? 
+One caveat is that the documents go back a few decades, some pre internet era, circa 1980s.
+
+## What is this repo all about then? 
 This repo contains Python code that performs a very simple task. It reads the label text files and extracts the document images of a chosen category into a folder. The label text files are in the original dataset under ```labels > [test | train | val].txt```
 
 Typical lines in these files look like: 
@@ -16,6 +20,27 @@ imagesg/g/t/l/gtl97d00/2063755082.tif 9
 ```
 
 The python code reads each of the specified label text file (i.e. test, train, val) and extracts all TIF files of the specified chosen category (e.g. 6) and places them into a separate folder, so you can see all the TIF images of your favourite category all in one folder! 
+
+## How to use the repo
+
+The usage is follows. Using the document sorter is simple. You have to specify folder locations of:
+
+  1. switch ```-d```: folder to the root of your uncompressed RVL-CDIP dataset. Remember the dataset is over 30 GB! 
+  2. switch ```-o:``` folder location of where you wish to copy the document of your chosen category 
+  3. switch ```-f```: file containing the filename and its associated label. This file is called train.txt, test.txt and val.txt in the original dataset
+  4. switch ```-l```: label value of your document category 
+```
+python document_sorter.py 
+   -d <path-to-doc-image-dataset-root> 
+   -f <path-to-label-.txt> 
+   -o <folder-to-copy-doc-images-to> 
+   -l <label-of-doc-cateogry-you-wish-to-copy-1-to-16>
+```
+
+## Feeling too lazy? 
+On Kaggle, Poojan P. has done the sorting of the test set already for you. But only the test set, and of course it stil has over 1000s of documents per category. May not be 10s of thousands like in the training set, but plenty still for most purposes. Go and [grab it from Kaggle repository](https://www.kaggle.com/pdavpoojan/the-rvlcdip-dataset-test) if you are feeling too lazy to clone this repo. 
+
+Just as a comparison, the training set has over 19k images of the invoice category. The test set may only 2k of invoices. 
 
 ## About the dataset 
 The [RVL-CDIP](https://www.cs.cmu.edu/~aharley/rvl-cdip/) (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels. 
@@ -42,19 +67,4 @@ The document classes are:
 16. memo
 ```
 
-## Usage 
-
-Using the document sorter is simple. You have to specify folder locations of:
-
-  1. switch ```-d```: folder to the root of your uncompressed RVL-CDIP dataset. Remember the dataset is over 30 GB! 
-  2. switch ```-o:``` folder location of where you wish to copy the document of your chosen category 
-  3. switch ```-f```: file containing the filename and its associated label. This file is called train.txt, test.txt and val.txt in the original dataset
-  4. switch ```-l```: label value of your document category 
-```
-python document_sorter.py 
-   -d <path-to-doc-image-dataset-root> 
-   -f <path-to-label-.txt> 
-   -o <folder-to-copy-doc-images-to> 
-   -l <label-of-doc-cateogry-you-wish-to-copy-1-to-16>
-```
 
