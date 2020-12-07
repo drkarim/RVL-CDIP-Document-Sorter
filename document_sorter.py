@@ -12,19 +12,19 @@ class Document2Label:
         From the dataset readme.txt 
     '''
     label_dictionary = {
-        3  :  "handwritten",
-        4  :  "advertisement",
-        5  :  "scientific report",
-        6  :  "scientific publication",
-        7  :  "specification",
-        8  :  "file folder",
-        9  :  "news article",
-        10  :  "budget",
-        11  :  "invoice",
-        12  :  "presentation",
-        13  :  "questionnaire",
-        14  :  "resume",
-        15  :  "memo",
+        "3"  :  "handwritten",
+        "4"  :  "advertisement",
+        "5"  :  "scientific report",
+        "6"  :  "scientific publication",
+        "7"  :  "specification",
+        "8"  :  "file folder",
+        "9"  :  "news article",
+        "10"  :  "budget",
+        "11"  :  "invoice",
+        "12"  :  "presentation",
+        "13"  :  "questionnaire",
+        "14"  :  "resume",
+        "15"  :  "memo",
     }
 
     def __init__(self):
@@ -53,7 +53,8 @@ class Document2Label:
                 while line and line_count < total_lines:
                     fn_and_label = line.split(" ")
                     filename = fn_and_label[0]
-                    label_value = int(fn_and_label[1].rstrip("\n"))
+                    label_value = fn_and_label[1].rstrip("\n")
+                    label_Value = label_value.strip()
 
                     if label_value in self.label_dictionary.keys():
                         self.label_map[label_value].append(filename)
@@ -78,7 +79,7 @@ class Document2Label:
     '''
     def QueryAndSortDocumentType(self, label_key, data_folder, sorted_data_folder, move_or_copy="copy"):
 
-        if label_key in self.label_map:
+        if label_key in self.label_map.keys():
 
             filename_list = self.label_map[label_key]
             total_files = len(filename_list)
@@ -87,9 +88,9 @@ class Document2Label:
                 for filename in filename_list:
                     base_name = os.path.basename(filename)
                     if move_or_copy == "copy":
-                        copyfile(data_folder+'/'+filename, data_folder+'/'+base_name)
+                        copyfile(data_folder+'/'+filename, sorted_data_folder+'/'+base_name)
                     elif move_or_copy == "move":
-                        move(data_folder+'/'+filename, data_folder+'/'+base_name)
+                        move(data_folder+'/'+filename, sorted_data_folder+'/'+base_name)
 
                     bar.next()
 
