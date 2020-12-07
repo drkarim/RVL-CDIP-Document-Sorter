@@ -27,7 +27,6 @@ The document classes are:
 15. resume
 16. memo
 
-Link: http://www.cs.cmu.edu/~aharley/rvl-cdip/
 
 ## Usage 
 
