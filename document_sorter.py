@@ -103,6 +103,10 @@ class Document2Label:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--filename", "-f", help="The path to the file containing mapping of filename to label", required=True)
+    parser.add_argument("--data", "-d", help="Path to folder location containing the document image dataset", required=True)
+    parser.add_argument("--output", "-o", help="Path to folder location to copy the docments to", required=True)
+    parser.add_argument("--label", "-l", help="Specify the label key (i.e. number) for the document type", required=True)
+
     args = parser.parse_args()
 
 
@@ -115,6 +119,6 @@ if __name__ == '__main__':
     doc2label.SetLabelFile(label_filename)
     doc2label.ReadLabelFile()
 
-    invoices_list = doc2label.QueryLabel(11)
+    doc2label.QueryAndSortDocumentType(args.label, args.data, args.output)
 
 
