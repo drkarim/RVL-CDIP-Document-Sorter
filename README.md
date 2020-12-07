@@ -23,7 +23,7 @@ The [RVL-CDIP](https://www.cs.cmu.edu/~aharley/rvl-cdip/) (Ryerson Vision Lab Co
 At the time of writing, it is one of the largest public datasets for scanned documents. It is an excellent repository from [Carnegie mellon university and Ryerson universities](https://www.cs.cmu.edu/~aharley/rvl-cdip/), with authors Adam W. Harley, Alex Ufkes, and Konstantinos G. Derpanis. 
 
 The document classes are: 
-
+```
 1. letter
 2. form
 3. email
@@ -40,7 +40,7 @@ The document classes are:
 14. questionnaire
 15. resume
 16. memo
-
+```
 
 ## Usage 
 
