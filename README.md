@@ -1,7 +1,21 @@
 # RVL-CDIP-Document-Sorter
 
 ## Introduction 
-THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. This repo contains Python code to sort the documents into folders. 
+THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. 
+
+This repo contains Python code that performs a very simple task. It reads the label text files and extracts the document images of a chosen category into a folder. The label text files are in the original dataset under ```labels > [test | train | val].txt```
+
+Typical lines in these files look like: 
+
+```
+imagesx/x/a/b/xab71f00/1002977593_1002977622.tif 6
+imageso/o/k/s/oks31f00/0001437969.tif 13
+imagesj/j/t/o/jto61f00/2050283643.tif 8
+imagesh/h/j/g/hjg89e00/0000049717.tif 0
+imagesg/g/t/l/gtl97d00/2063755082.tif 9
+```
+
+The python code reads each of the specified label text file (i.e. test, train, val) and extracts all TIF files of the specified chosen category (e.g. 6) and places them into a separate folder, so you can see all the TIF images of your favourite category all in one folder! 
 
 ## About the dataset 
 The [RVL-CDIP](https://www.cs.cmu.edu/~aharley/rvl-cdip/) (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels. 
