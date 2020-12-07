@@ -1,7 +1,9 @@
 # RVL-CDIP-Document-Sorter
 
 ## What dataset are we talking about?  
-THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. The dataset consists of 400,000 grayscale images in 16 classes (invoices, memos, resumes, forms, etc.), with 25,000 images per class. At the time of writing, it is one of the largest public datasets for scanned documents. 
+THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. The dataset consists of 400,000 grayscale images in 16 classes (invoices, memos, resumes, forms, etc.), with 25,000 images per class. 
+
+At the time of writing, it is one of the largest public datasets for scanned documents. It could be looked at as the equivalent of [ImageNet](http://www.image-net.org/) for the document image community. 
 
 ## Too good to be true? 
 One caveat is that the documents go back a few decades, some pre internet era, circa 1980s. There are no annotations inside the document if that's what you are looking for. However, every document has been classified to fall into one of the 16 categories. 
@@ -45,7 +47,7 @@ Just as a comparison, the training set has over 19k images of the invoice catego
 ## About the dataset 
 The [RVL-CDIP](https://www.cs.cmu.edu/~aharley/rvl-cdip/) (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels. 
 
-At the time of writing, it is one of the largest public datasets for scanned documents. It is an excellent repository from [Carnegie mellon university and Ryerson universities](https://www.cs.cmu.edu/~aharley/rvl-cdip/), with authors Adam W. Harley, Alex Ufkes, and Konstantinos G. Derpanis. 
+Excellent work from [Carnegie mellon university and Ryerson universities](https://www.cs.cmu.edu/~aharley/rvl-cdip/), with authors Adam W. Harley, Alex Ufkes, and Konstantinos G. Derpanis. 
 
 The document classes are: 
 ```
@@ -66,5 +68,17 @@ The document classes are:
 15. resume
 16. memo
 ```
+## This dataset is not for me then 
+
+Go knock yourself out with these publicly available datasets: 
+
+1. [IIT dataset](https://ir.nist.gov/cdip/README.txt) is the mother (i.e. super-set) of the RVL-CDIP
+2. [PubLay](https://arxiv.org/abs/1908.07836) the largest for layout analysis (as of 2019)
+3. [PubTabNet](https://github.com/ibm-aur-nlp/PubTabNet) for image-based table recognition in documents 
+4. [SD02](https://www.nist.gov/srd/nist-special-database-2) for forms 
+5. [Tobacco-3482]() for 
+
+To read more please refer to [Jonathan Degange's on Medium article](https://medium.com/@jdegange85/document-image-datasets-b7f8df01010d)
+
 
 
