@@ -76,7 +76,7 @@ Go knock yourself out with these publicly available datasets:
 2. [PubLay](https://arxiv.org/abs/1908.07836) the largest for layout analysis (as of 2019)
 3. [PubTabNet](https://github.com/ibm-aur-nlp/PubTabNet) for image-based table recognition in documents 
 4. [SD02](https://www.nist.gov/srd/nist-special-database-2) for forms 
-5. [Tobacco-3482]() for 
+5. Tobacco-3482 to which I could not find the original dataset source but a [Kaggle version seem to exist](https://www.kaggle.com/patrickaudriaz/tobacco3482jpg), not sure if its the entire dataset on Kaggle.
 
 To read more please refer to [Jonathan Degange's on Medium article](https://medium.com/@jdegange85/document-image-datasets-b7f8df01010d)
 
