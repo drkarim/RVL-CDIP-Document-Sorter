@@ -27,4 +27,19 @@ The document classes are:
 
 Link: http://www.cs.cmu.edu/~aharley/rvl-cdip/
 
+## Usage 
+
+Using the document sorter is simple. You have to specify folder locations of:
+
+  1. switch ```-d```: folder to the root of your uncompressed RVL-CDIP dataset. Remember the dataset is over 30 GB! 
+  2. switch ```-o:``` folder location of where you wish to copy the document of your chosen category 
+  3. switch ```-f```: file containing the filename and its associated label. This file is called train.txt, test.txt and val.txt in the original dataset
+  4. switch ```-l```: label value of your document category 
+```
+python document_sorter.py 
+   -d <path-to-doc-image-dataset-root> 
+   -f <path-to-label-.txt> 
+   -o <folder-to-copy-doc-images-to> 
+   -l <label-of-doc-cateogry-you-wish-to-copy-1-to-16>
+```
 
