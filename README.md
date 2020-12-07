@@ -1,15 +1,17 @@
 # RVL-CDIP-Document-Sorter
 
 ## Introduction 
-THe RVL-CDIP is a large dataset of scanned documents in image (TIF) format. This repo contains Python code to sort the documents into folders. 
+THe [RVL-CDIP (Ryerson Vision Lab - Complex Document Information Processing)](https://www.cs.cmu.edu/~aharley/rvl-cdip/) is a large dataset of scanned documents in image (TIF) format. This repo contains Python code to sort the documents into folders. 
 
 ## About the dataset 
-The RVL-CDIP (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels.
+The [RVL-CDIP](https://www.cs.cmu.edu/~aharley/rvl-cdip/) (Ryerson Vision Lab Complex Document Information Processing) dataset consists of 400,000 grayscale images in 16 classes, with 25,000 images per class. There are 320,000 training images, 40,000 validation images, and 40,000 test images. The images are sized so their largest dimension does not exceed 1000 pixels. 
+
+At the time of writing, it is one of the largest public datasets for scanned documents. It is an excellent repository from [Carnegie mellon university and Ryerson universities](https://www.cs.cmu.edu/~aharley/rvl-cdip/), with authors Adam W. Harley, Alex Ufkes, and Konstantinos G. Derpanis. 
 
 The document classes are: 
 
 1. letter
-2. orm
+2. form
 3. email
 4. handwritten
 5. advertisement
